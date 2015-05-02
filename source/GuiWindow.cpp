@@ -232,7 +232,7 @@ HRESULT DemoApp::CreateDeviceResources()
             rc.right - rc.left,
             rc.bottom - rc.top
             );
-
+		
         // Create a Direct2D render target.
         hr = m_pD2DFactory->CreateHwndRenderTarget(
 			D2D1::RenderTargetProperties( D2D1_RENDER_TARGET_TYPE_DEFAULT, D2D1::PixelFormat( DXGI_FORMAT_UNKNOWN, D2D1_ALPHA_MODE_PREMULTIPLIED ) ),
