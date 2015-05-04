@@ -35,6 +35,9 @@
     <ClInclude Include="..\base\basetypes.h">
       <Filter>base</Filter>
     </ClInclude>
+    <ClInclude Include="..\base\cstring.h">
+      <Filter>base</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="resource.rc">

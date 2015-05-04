@@ -105,7 +105,7 @@ namespace DUI_V0_1{
 			return this->cx == size.cx && this->cy == size.cy;
 		}
 
-		bool operator!=( _In_ _MyBase size ) const throw( )
+		bool operator!=( _In_ const _MyBase& size ) const throw( )
 		{
 			return !( *this == size );
 		}
@@ -855,17 +855,17 @@ namespace DUI_V0_1{
 		}
 	};
 }// namsespace DUI_BASE 
-class type_traits_sys
+struct type_traits_sys
 {
 	typedef tagSIZE SIZE;
 	typedef tagPOINT POINT;
 	typedef tagRECT RECT;
 };
 typedef DUI_BASE::SIZE<LONG> SIZE;// 兼容标准size基类。
-typedef DUI_BASE::CSizeT<LONG,DUI_BASE::type_traits<LONG>,tagSIZE> CSize;// 标准Size
+typedef DUI_BASE::CSizeT<LONG,type_traits_sys,tagSIZE> CSize;// 标准Size
 typedef DUI_BASE::POINT<LONG> POINT; // 兼容标准POINT基类
-typedef DUI_BASE::CPointT<LONG,DUI_BASE::type_traits<LONG>,tagPOINT> CPoint;// 标准Point
+typedef DUI_BASE::CPointT<LONG, type_traits_sys, tagPOINT> CPoint;// 标准Point
 typedef DUI_BASE::RECT<LONG> RECT;// 兼容标准RECT基类
-typedef DUI_BASE::CRectT<LONG, DUI_BASE::type_traits<LONG>, tagRECT> CRect; // 默认，兼容系统的类型
+typedef DUI_BASE::CRectT<LONG, type_traits_sys, tagRECT> CRect; // 默认，兼容系统的类型
 
 }// nasmespace DUI_V0_1

@@ -11,12 +11,103 @@ namespace DUI_BASE
 	{
 	public:
  		typedef CStringT<_Elem, _Traits, _Alloc> _Myt;
- 		typedef std::basic_string<_Elem, _Traits, _Alloc> _MyBase;
+ 		typedef std::basic_string<_Elem, _Traits, _Alloc> _Mybase;
 
 		CStringT() throw()
+		:_Mybase(){}
+		
+		CStringT( _Mybase&&base)
+		:_Mybase(base){}
+
+		CStringT(const _Mybase&base)
+			:_Mybase(base) {}
+
+		CStringT( const _Elem *_Ptr, size_type _Count )
+			: _Mybase(_Ptr,_Count){}
+		
+		CStringT( const _Elem *_Ptr )
+			:_Mybase(_Ptr){}
+		
+		CStringT( size_type _Count, _Elem _Ch )
+			:_Mybase(_Count, _Ch) {}
+		
+		template<class _Iter,
+		class = typename enable_if<_Is_iterator<_Iter>::value,
+			void>::type>
+			CStringT( _Iter _First, _Iter _Last )
+			: _Mybase(_First, _Last) {}
+
+		_Myt& operator=( _Myt&& _Right ) _NOEXCEPT
 		{
+			if ( this != &_Right )
+			{	// different, assign it
+				if ( this->_Getal() != _Right._Getal()
+					 && _Alty::propagate_on_container_copy_assignment::value )
+				{	// change allocator before copying
+					_Tidy( true );
+					this->_Change_alloc( _Right._Getal() );
+				}
+
+				assign( _Right );
+			}
+			return ( *this );
+		}
+
+		_Myt& operator =( _Mybase&& _Right )
+		{
+			(_Mybase)*this = _Right;
+			return *this;
+		}
+
+		_Myt& operator=( const _Myt& _Right )
+		{
+			(_Mybase)*this = (_Mybase)_Right;
+			return *this;
+		}
+
+		_Myt& operator=( const _Mybase &_Right )
+		{
+			(_Mybase)*this = _Right;
+			return *this;
+		}
+
+		_Myt& operator=( const _Elem *_Ptr )
+		{	// assign [_Ptr, <null>)
+			assign( _Ptr );
+			return *this;
+		}
+
+		_Myt& operator=( _Elem _Ch )
+		{	// assign 1 * _Ch
+			assign( 1, _Ch );
+			return *this;
+		}
+
+		_Myt& operator+=( const _Myt& _Right )
+		{	// append _Right
+			append( _Right );
+			return *this;
 		}
 		
+		_Myt& operator+=( const _Mybase&_Right )
+		{
+			assign( _Right );
+			return *this;
+		}
+
+		_Myt& operator+=( const _Elem *_Ptr )
+		{	// append [_Ptr, <null>)
+			append( _Ptr );
+			return *this;
+		}
+
+		_Myt& operator+=( _Elem _Ch )
+		{	// append 1 * _Ch
+			append( (size_type)1, _Ch );
+			return *this;
+		}
+		
+
 		void to_lower( const std::locale & Loc = std::locale() )
 		{
 			boost::to_lower( *this, Loc );

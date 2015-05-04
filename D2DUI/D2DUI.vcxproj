@@ -48,6 +48,7 @@
       <MultiProcessorCompilation>false</MultiProcessorCompilation>
       <TreatWarningAsError>true</TreatWarningAsError>
       <AdditionalIncludeDirectories>E:\boost_1_55_0\bin\vc12_x86\include\boost-1_55\;E:\boost_1_55_0\</AdditionalIncludeDirectories>
+      <ExceptionHandling>Async</ExceptionHandling>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -77,6 +78,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\base\basetypes.h" />
+    <ClInclude Include="..\base\cstring.h" />
     <ClInclude Include="..\source\GuiWindow.h" />
   </ItemGroup>
   <ItemGroup>
