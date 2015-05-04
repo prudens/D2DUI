@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DemoApp" Collapsed="true">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CABAIAAAAAAMAQEAQAAAkDxAApAgAAAABAAAYAAIAAA=</HashCode>
+      <FileName>E:\D2DUI\D2DUI\source\GuiWindow.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DUI_V0_1::Size&lt;T&gt;" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>E:\D2DUI\D2DUI\base\basetypes.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DUI_V0_1::CSize&lt;Size&gt;" Collapsed="true">
+    <Position X="0.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAIAQAAAAAAAAAAAAAgACAAAAA=</HashCode>
+      <FileName>E:\D2DUI\D2DUI\base\basetypes.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Typedef Name="DUI_V0_1::SizeU" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>E:\D2DUI\D2DUI\base\basetypes.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="DUI_V0_1::CSizeU" Collapsed="true">
+    <Position X="0.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>E:\D2DUI\D2DUI\base\basetypes.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Font Name="微软雅黑" Size="9" />
+</ClassDiagram>
