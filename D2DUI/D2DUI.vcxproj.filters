@@ -16,6 +16,9 @@
     <Filter Include="base">
       <UniqueIdentifier>{3ebf7134-bb4d-422f-b839-417c9b6c9d73}</UniqueIdentifier>
     </Filter>
+    <Filter Include="test">
+      <UniqueIdentifier>{bd86c89f-317c-4fdd-bc6f-5d4b6f718ee4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\source\main.cpp">
@@ -26,6 +29,9 @@
     </ClCompile>
     <ClCompile Include="..\base\basetypes.cpp">
       <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\test\base_test.cpp">
+      <Filter>test</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

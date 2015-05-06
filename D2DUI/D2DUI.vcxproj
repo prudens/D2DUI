@@ -75,6 +75,7 @@
     <ClCompile Include="..\base\basetypes.cpp" />
     <ClCompile Include="..\source\GuiWindow.cpp" />
     <ClCompile Include="..\source\main.cpp" />
+    <ClCompile Include="..\test\base_test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\base\basetypes.h" />
