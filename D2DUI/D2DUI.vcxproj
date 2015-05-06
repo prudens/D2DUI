@@ -47,13 +47,14 @@
       <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;</PreprocessorDefinitions>
       <MultiProcessorCompilation>false</MultiProcessorCompilation>
       <TreatWarningAsError>true</TreatWarningAsError>
-      <AdditionalIncludeDirectories>E:\boost_1_55_0\bin\vc12_x86\include\boost-1_55\;E:\boost_1_55_0\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\boost_1_55_0\bin\vc12_x86\include\boost-1_55\;E:\boost_1_55_0\;E:\boost\boost_1_58_0\</AdditionalIncludeDirectories>
+      <ExceptionHandling>Async</ExceptionHandling>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>d2d1.lib;WindowsCodecs.lib;dwrite.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Console</SubSystem>
-      <AdditionalLibraryDirectories>E:\boost_1_55_0\bin\vc12_x86\lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>E:\boost_1_55_0\bin\vc12_x86\lib;E:\boost\boost_1_58_0\libs</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -74,6 +75,7 @@
     <ClCompile Include="..\base\basetypes.cpp" />
     <ClCompile Include="..\source\GuiWindow.cpp" />
     <ClCompile Include="..\source\main.cpp" />
+    <ClCompile Include="..\test\base_test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\base\basetypes.h" />

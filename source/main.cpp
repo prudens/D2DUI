@@ -3,7 +3,7 @@
 #include "GuiWindow.h"
 #include <memory>
 #include "../base/basetypes.h"
-int main( char**, int )
+int main_1( char**, int )
 {
 	using std::cout;
 	using std::endl;
